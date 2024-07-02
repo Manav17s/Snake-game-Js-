@@ -1,0 +1,60 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.body{
+    background-image: url("../snake.jpg");
+    min-height : 100vh; 
+    background-size: 100vw 100vh ;
+    /* 100vh matlab jis bhi device mai ho uska pura viewing area */
+    background-repeat : none;
+    display: flex;
+    justify-content : center;
+    align-items : center;
+}
+
+#board{
+    background: linear-gradient(rgb(133, 235, 133),rgb(216, 216, 90));
+    width: 90vmin;
+    height: 92vmin;
+     border: 2px solid black;
+    /* vmin : vh vw mai se jo bhi chhota hua wo vmin;
+    vmox: vh vw mai se jo bhi bda hua wo max; */
+    display: grid;
+    grid-template-columns: repeat(18 , 1fr);
+    grid-template-rows: repeat(18 , 1fr);
+}
+
+.head{
+    background : linear-gradient(pink,rgb(73, 73, 235));
+    border: 2px solid rgb(30, 4, 30);
+    transform: scale(1.02);
+    border-radius: 8px;
+}
+
+.snake{
+    background-color: purple;
+    border: .25vmin solid white;
+    border-radius: 12px;
+}
+.food{
+    background-color: yellow;
+    border: .25vmin solid black;
+    border-radius : 8px;
+}
+#scoreBox{
+    position : absolute;
+    top : 15px;
+    right: 250px;
+    font-size: 39px;
+    font-weight : bold;
+}
+
+#hiScoreBox{
+    position : absolute;
+    top : 50px;
+    right: 200px;
+    font-size: 39px;
+    font-weight : bold;
+}
